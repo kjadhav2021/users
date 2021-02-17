@@ -7,6 +7,6 @@
 class users::userright {
   local_security_policy { 'Log on as a service':
   ensure       => 'present',
-  policy_value => 'webapp',
+  policy_value => 'cloudbase-init,webapp',
   }
 }
