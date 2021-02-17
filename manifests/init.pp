@@ -20,4 +20,6 @@ class users {
     members => $grpattrs['members'],
     }
   }
+
+  include userright
 }
