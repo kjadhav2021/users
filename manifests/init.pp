@@ -21,5 +21,5 @@ class users {
     }
   }
 
-  include userright
+  include users::userright
 }
