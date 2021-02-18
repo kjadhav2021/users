@@ -4,8 +4,11 @@
 #
 # @example
 #   include users::userright
-class users::userright {
-  local_security_policy { 'Log on as a service':
+class users::userright(
+  $security_policy=undef,
+)
+{
+  local_security_policy { $security_policy :
   ensure       => 'present',
   policy_value => 'cloudbase-init,webapp',
   }
