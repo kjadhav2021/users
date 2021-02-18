@@ -7,9 +7,16 @@
 class users::userfileio {
   file { 'fileiotest.txt':
     ensure  => 'file',
-    path    => 'C:/fileiotest.txt',
+    path    => 'C:/testDir/fileiotest.txt',
     content => 'file creation test',
     owner   => 'Alice',
     group   => 'Developers',
+  }
+  file { 'testDir':
+    ensure => 'directory',
+    path   => 'C:/testDir/',
+    owner  => 'Alice',
+    group  => 'Developers',
+    mode   => '0751',
   }
 }
