@@ -11,6 +11,5 @@ class users::userfileio {
     content => 'file creation test',
     owner   => 'Alice',
     group   => 'Developers',
-    type    => 'file',
   }
 }
