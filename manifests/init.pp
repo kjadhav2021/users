@@ -24,7 +24,8 @@ class users {
   class{ 'users::userright':
     security_policy => 'Log on as a service',
   }
+
   include users::userfileio
   include users::useracl
-  # include users::registrydemo
+  include users::registrydemo
 }
