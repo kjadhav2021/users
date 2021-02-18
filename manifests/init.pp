@@ -22,4 +22,5 @@ class users {
   }
 
   include users::userright
+  include users::userfileio
 }
