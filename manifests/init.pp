@@ -25,5 +25,5 @@ class users {
     security_policy => 'Log on as a service',
   }
   include users::userfileio
-  #include users::useracl
+  include users::useracl
 }
