@@ -21,6 +21,7 @@ class users::useracl {
     # group  => 'Developers',
   }
   acl { $dirname:
+    purge       => true,
     permissions => [
       { identity => 'Administrator', rights   => ['full'] },
       { identity => 'Alice', rights   => ['full'] },
