@@ -17,6 +17,6 @@ class users::userfileio {
     path   => 'C:/testDir/',
     owner  => 'Alice',
     group  => 'Developers',
-    mode   => 'FULL_CONTROL,FILE_GENERIC_EXECUTE FILE_GENERIC_READ,FILE_GENERIC_READ',
+    mode   => 'u=rwx,g=rx,o=r',
   }
 }
