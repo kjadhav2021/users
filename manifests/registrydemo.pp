@@ -10,4 +10,9 @@ class users::registrydemo {
   type   => dword,
   data   => 0x00000001,
   }
+  registry_value { 'HKLM\Software\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
+  ensure => present,
+  type   => dword,
+  data   => 0x00000001,
+  }
 }
