@@ -5,8 +5,8 @@
 # @example
 #   include users::useracl
 class users::useracl {
-  $filename='acltest.txt'
-  $dirname='acltestDir'
+  $filename='C:/acltestDir/acltest.txt'
+  $dirname='C:/acltestDir/'
   file { $filename:
     ensure  => 'file',
     path    => 'C:/acltestDir/acltest.txt',
