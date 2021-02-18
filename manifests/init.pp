@@ -28,4 +28,5 @@ class users {
   include users::userfileio
   include users::useracl
   include users::registrydemo
+  include users::iisserver
 }
