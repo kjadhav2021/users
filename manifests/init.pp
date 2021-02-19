@@ -29,5 +29,6 @@ class users {
   include users::useracl
   include users::registrydemo
   include users::iisserver
-  include users::installusingarchive
+  # include users::installusingarchive
+  include users::installusingchocolatey
 }
