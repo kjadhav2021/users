@@ -9,7 +9,7 @@ class users::installusingchocolatey {
   package { '7zip':
     ensure          => installed,
     provider        => chocolatey,
-    install_options => ['/VERYSILENT', '/NORESTART'],
+    #install_options => ['/VERYSILENT', '/NORESTART'],
   }
   reboot { 'after':
     subscribe => Package['7zip'],
