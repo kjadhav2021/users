@@ -18,7 +18,8 @@ class users::iisserver {
     state                   => 'started',
     managed_pipeline_mode   => 'Integrated',
     managed_runtime_version => 'v4.0',
-  } -> iis_site { 'minimal':
+  }
+  iis_site { 'minimal':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\minimal',
     applicationpool => 'minimal_site_app_pool',
