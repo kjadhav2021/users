@@ -7,7 +7,11 @@
 class users::installusingchocolatey {
   include chocolatey
   package { '7zip':
-    ensure   => installed,
-    provider => chocolatey,
+    ensure          => installed,
+    provider        => chocolatey,
+    install_options => ['/VERYSILENT', '/NORESTART'],
+  }
+  reboot { 'after':
+    subscribe => Package['7zip'],
   }
 }
