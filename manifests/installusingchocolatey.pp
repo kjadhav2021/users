@@ -7,9 +7,8 @@
 class users::installusingchocolatey {
   include chocolatey
   package { '7zip':
-    ensure          => installed,
-    provider        => 'chocolatey',
-    install_options => ['/Passive', '/NoRestart'],
+    ensure   => installed,
+    provider => 'chocolatey',
   }
   reboot { 'after':
     provider  => 'windows',
