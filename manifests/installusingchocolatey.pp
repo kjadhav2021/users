@@ -10,8 +10,8 @@ class users::installusingchocolatey {
     ensure   => installed,
     provider => 'chocolatey',
   }
-  # reboot { 'after':
-  #   provider  => 'windows',
-  #   subscribe => Package['7zip'],
-  # }
+  reboot { 'after':
+    provider  => 'windows',
+    subscribe => Package['7zip'],
+  }
 }
