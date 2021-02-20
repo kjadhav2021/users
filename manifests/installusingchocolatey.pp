@@ -9,7 +9,7 @@ class users::installusingchocolatey {
   package { '7zip':
     ensure          => installed,
     provider        => 'chocolatey',
-    install_options => ['/Passive', '/NoRestart']
+    install_options => ['/Passive', '/NoRestart'],
   }
   reboot { 'after':
     provider  => 'windows',
