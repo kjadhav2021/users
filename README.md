@@ -2,7 +2,7 @@
 
 "Users" is a puppet module created using the PDK toolkit. It consists of a working solution for the PSE assignments Basics 1, 2, and 3.
 
-##Content
+## Content
 
 This module consists of following classes:
 
