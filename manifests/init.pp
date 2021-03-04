@@ -1,6 +1,6 @@
-# @summary A short summary of the purpose of this class
+# @summary The puppet class is an entry point for user module.
 #
-# A description of what this class does
+# It read hiera data for users and groups elements and create users and groups using puppet inbuilt resources user and group
 #
 # @example
 #   include users
@@ -16,19 +16,19 @@ class users {
   }
   lookup('groups',Hash,'hash').each | String $groupname, Hash $grpattrs | {
     group{ $groupname:
-    ensure  =>'present',
-    members => $grpattrs['members'],
+      ensure  =>'present',
+      members => $grpattrs['members'],
     }
   }
 
-  class{ 'users::userright':
+  class { 'users::userright':
     security_policy => 'Log on as a service',
   }
 
-  include users::userfileio
-  include users::useracl
-  include users::registrydemo
-  include users::iisserver
-  # include users::installusingarchive
-  include users::installusingchocolatey
+  include users::user_fileio
+  include users::user_acl
+  include users::registry_demo
+  include users::iis_server
+  # include users::install_using_archive
+  include users::install_using_chocolatey
 }

@@ -4,7 +4,7 @@
 #
 # @example
 #   include users::userfileio
-class users::userfileio {
+class users::user_fileio {
   file { 'fileiotest.txt':
     ensure  => 'file',
     path    => 'C:/testDir/fileiotest.txt',

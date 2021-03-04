@@ -1,10 +1,12 @@
-# @summary A short summary of the purpose of this class
+# @summary It is sample class to demonstrate the use of forge modules windowsfeature and iis_feature (and its components)
 #
-# A description of what this class does
+# It downloads windowsfeature and iis_feature module from puppet forge and set up a minimal website.
+# I have tested the website by copying sample html file in website folder
 #
 # @example
 #   include users::iisserver
-class users::iisserver {
+
+class users::iis_server {
   $iisfeatures = ['Web-Server','Web-WebServer','Web-Mgmt-Console','Web-Mgmt-Tools']
   windowsfeature { $iisfeatures:
     ensure => 'present',
@@ -14,7 +16,7 @@ class users::iisserver {
     ensure => 'present',
   }
   # Delete the default website to prevent a port binding conflict.
-  iis_site {'Default Web Site':
+  iis_site { 'Default Web Site':
     ensure  => absent,
     require => Iis_feature['Web-WebServer'],
   }

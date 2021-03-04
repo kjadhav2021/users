@@ -4,21 +4,17 @@
 #
 # @example
 #   include users::useracl
-class users::useracl {
-  $filename='C:/acltestDir/acltest.txt'
-  $dirname='C:/acltestDir/'
+class users::user_acl {
+  $filename = 'C:/acltestDir/acltest.txt'
+  $dirname = 'C:/acltestDir/'
   file { $filename:
     ensure  => 'file',
     path    => 'C:/acltestDir/acltest.txt',
     content => 'forge access control list module test',
-    # owner   => 'Alice',
-    # group   => 'Developers',
   }
   file { $dirname:
     ensure => 'directory',
     path   => 'C:/acltestDir/',
-    # owner  => 'Alice',
-    # group  => 'Developers',
   }
   acl { $dirname:
     purge       => true,

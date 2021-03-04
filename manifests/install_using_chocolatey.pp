@@ -4,7 +4,7 @@
 #
 # @example
 #   include users::installusingchocolatey
-class users::installusingchocolatey {
+class users::install_using_chocolatey {
   include chocolatey
   package { '7zip':
     ensure   => installed,
