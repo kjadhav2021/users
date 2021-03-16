@@ -25,6 +25,10 @@ define users::directory_rights (
   String $rights,
 )
 {
+  file { $directory_path:
+    ensure => 'directory',
+    path   => $directory_path,
+  }
   acl { $directory_title:
     target      => $directory_path,
     purge       => true,
