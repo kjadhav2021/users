@@ -1,6 +1,5 @@
-# @summary A short summary of the purpose of this class
-#
-# A description of what this class does
+# @summary
+# A demo class for exploring registry_value module from puppet forge
 #
 # @example
 #   include users::registrydemo

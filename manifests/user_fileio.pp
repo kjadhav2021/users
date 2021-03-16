@@ -1,6 +1,6 @@
-# @summary A short summary of the purpose of this class
+# @summary
+# A sample class to show use of inbuilt file resource from puppet
 #
-# A description of what this class does
 #
 # @example
 #   include users::userfileio

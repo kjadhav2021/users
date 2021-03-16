@@ -1,6 +1,5 @@
-# @summary A short summary of the purpose of this class
-#
-# A description of what this class does
+# @summary
+# A sample class to show use of archive module from puppet forge
 #
 # @example
 #   include users::installusingarchive
